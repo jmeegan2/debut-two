@@ -1,4 +1,13 @@
-<div>
+<div class="page-width">
+    {% if section.settings.title != blank %}
+      <div class="section-header text-center">
+        <h2>{{ section.settings.title | escape }}</h2>
+      </div>
+    {% endif %}
+
+      {% for staff in section.blocks %}
+
+      {% endfor %}
 
 </div>
 {% schema %}
@@ -13,6 +22,30 @@
             "label" : "Section Title",
             "default" : "Meet our Team"
     
+        }
+    ],
+    "blocks" : [
+        {
+            "name" : "Team Member",
+            "type" : "staff-profile",
+            "settings" : [
+            {
+            "id" : "staff-name",
+            "type" : "text",
+            "label" : "Name"
+            },
+            {
+                "id" : "staff-title",
+                "type" : "text",
+                "label" : "Job Title"
+            },
+            {
+                "id" : "staff-bio",
+                "type" : "textarea",
+                "label" : "Bio"
+            }
+            ]
+            
         }
     ]
 }
