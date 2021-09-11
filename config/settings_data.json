@@ -221,6 +221,12 @@
           "background_image": "shopify:\/\/shop_images\/House_Pic.jpg",
           "background_image_position": "center center"
         }
+      },
+      "team-members": {
+        "type": "team-members",
+        "settings": {
+          "title": "Meet our Tea"
+        }
       }
     },
     "content_for_index": [
