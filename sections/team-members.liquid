@@ -4,6 +4,16 @@
         <h2>{{ section.settings.title | escape }}</h2>
       </div>
     {% endif %}
+   
+    {% for member in section.blocks %}
+      <div>
+          <h3>{{ member.settings.name }}</h3>
+          <span>{{ member.settings.title }}</span>
+          <p>{{ member.settings.bio }}</p>
+      </div>
+
+      {% endfor %}
+
 </div>
 
 {% schema %}
@@ -24,10 +34,20 @@
       "type" : "staff-profile",
       "settings" : [
       {
-        "id" : "staff-name",
+        "id" : "name",
         "type" : "text",
         "label" : "Name"
         
+      },
+      {
+        "id" : "title",
+        "type" : "text",
+        "label" : "Job Title"
+      },
+      {
+        "id" : "bio",
+        "type" : "textarea",
+        "label" : "Bio"
       }
       ]
     }
