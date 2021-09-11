@@ -1,5 +1,6 @@
 {
   "current": {
+    "color_text": "#fd0000",
     "sections": {
       "header": {
         "type": "header",
