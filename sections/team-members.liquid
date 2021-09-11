@@ -4,7 +4,6 @@
         <h2>{{ section.settings.title | escape }}</h2>
       </div>
     {% endif %}
-
 </div>
 
 {% schema %}
@@ -18,7 +17,20 @@
         "label" : "Secton Title",
         "default" : "Meet our Team"
     }
+    ],
+    "blocks" : [ 
+    {
+      "name" : "Team member",
+      "type" : "staff-profile",
+      "settings" : [
+      {
+        "id" : "staff-name",
+        "type" : "text",
+        "label" : "Name"
+        
+      }
+      ]
+    }
     ]
 }
-
 {% endschema %}
