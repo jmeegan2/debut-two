@@ -5,8 +5,12 @@
       </div>
     {% endif %}
 
-      {% for staff in section.blocks %}
-
+      {% for member in section.blocks %}
+      <div>
+          <h3>{{ member.settings.name }}</h3>
+          <span>{{ member.settings.title }}</span>
+          <p>{{ member.settings.bio }}</p>
+      </div>
       {% endfor %}
 
 </div>
@@ -30,17 +34,17 @@
             "type" : "staff-profile",
             "settings" : [
             {
-            "id" : "staff-name",
+            "id" : "name",
             "type" : "text",
             "label" : "Name"
             },
             {
-                "id" : "staff-title",
+                "id" : "title",
                 "type" : "text",
                 "label" : "Job Title"
             },
             {
-                "id" : "staff-bio",
+                "id" : "bio",
                 "type" : "textarea",
                 "label" : "Bio"
             }
